@@ -1,0 +1,17 @@
+/*  Dashboard widget styles
+-----------------------------------------------*/
+#julep-admin-widget {
+  overflow: hidden;
+  position: relative; }
+  #julep-admin-widget .admin-widget-image {
+    display: inline-block;
+    margin-right: 5%;
+    width: 30%; }
+    #julep-admin-widget .admin-widget-image img {
+      height: auto;
+      max-width: 100%;
+      width: auto; }
+  #julep-admin-widget .admin-widget-content {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%; }

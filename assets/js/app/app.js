@@ -1,0 +1,1 @@
+// Require script files from /inc. Ex: var siteHeader =  require('../inc/header');

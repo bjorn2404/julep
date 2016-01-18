@@ -1,0 +1,13 @@
+{
+  "name": "Julep",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bjorn2404/julep",
+  "authors": [
+    "Bjorn Holine <bjorn2404@gmail.com>"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.6",
+    "neat": "~1.7.2",
+    "bitters": "~1.1.0"
+  }
+}

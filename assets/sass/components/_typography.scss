@@ -1,0 +1,94 @@
+/* =Typographical mixins and styling
+-------------------------------------------------------------- */
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+/* =Typography
+-------------------------------------------------------------- */
+html {
+  font-size: 100%;
+}
+
+body {
+  @include fontSize(15px);
+  font-family: $base-font-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include clearfix;
+  clear: both;
+  float: none;
+  line-height: 1.25em;
+  margin-bottom: 20px;
+
+}
+
+h1 {
+  @include fontSize(24px);
+}
+
+h2 {
+  @include fontSize(18px);
+}
+
+h3 {
+  @include fontSize(17px);
+}
+
+h4 {
+  @include fontSize(16px);
+}
+
+h5 {
+  @include fontSize(15px);
+}
+
+h6 {
+  @include fontSize(15px);
+}
+
+blockquote {
+  background-color: #f9f9f9;
+  border-left: 5px solid #ccc;
+  font-style: italic;
+  padding: 20px;
+}
+
+cite {
+  font-style: italic;
+}
+
+a, a:visited {
+  @include transition (all 200ms ease-in-out);
+  text-decoration: none;
+
+  &:hover {
+	@include transition (all 200ms ease-in-out);
+	text-decoration: underline;
+  }
+}
+
+ul {
+  @extend %default-ul; // Adds browser default spacing back
+}
+
+ol {
+  @extend %default-ol; // Adds browser default spacing back
+}
+
+em {
+  font-weight: normal;
+}
+
+address {
+  font-style: normal;
+  font-weight: normal;
+}
