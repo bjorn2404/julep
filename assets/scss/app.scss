@@ -5,5 +5,8 @@
 @import "../../assets/bower_components/neat/app/assets/stylesheets/neat-helpers";
 @import "grid-settings";
 
+@import "utilities/index";
+@import "base/index";
 @import "components/index";
+@import "vendor/index";
 @import "layouts/index";

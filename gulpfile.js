@@ -22,7 +22,7 @@ var autoprefixer = require('gulp-autoprefixer'),
 	plumber = require('gulp-plumber'),
 	reload = browserSync.reload,
 	rename = require('gulp-rename'),
-	sass = require('gulp-sass'),
+	sass = require('gulp-scss'),
 	sourcemaps = require('gulp-sourcemaps'),
 	sourcestream = require('vinyl-source-stream'),
 	streamify = require('gulp-streamify'),
@@ -45,7 +45,7 @@ gulp.task('browser-sync', function () {
  * Styles
  */
 gulp.task('styles', function () {
-	return gulp.src([source + 'sass/**/*.scss'])
+	return gulp.src([source + 'scss/**/*.scss'])
 		.pipe(plumber({
 			errorHandler: function (err) {
 				console.log(err);
@@ -78,7 +78,7 @@ gulp.task('styles', function () {
  * Admin styles
  */
 gulp.task('adminStyles', function () {
-	return gulp.src([adminSource + 'sass/**/*.scss'])
+	return gulp.src([adminSource + 'scss/**/*.scss'])
 		.pipe(plumber({
 			errorHandler: function (err) {
 				console.log(err);
@@ -131,8 +131,8 @@ gulp.task('js', function () {
 
 // Watch Task
 gulp.task('default', ['styles', 'adminStyles', 'js', 'browser-sync'], function () {
-	gulp.watch('sass/**/*.scss', {cwd: source}, ['styles']);
-	gulp.watch('sass/**/*.scss', {cwd: adminSource}, ['adminStyles']);
+	gulp.watch('scss/**/*.scss', {cwd: source}, ['styles']);
+	gulp.watch('scss/**/*.scss', {cwd: adminSource}, ['adminStyles']);
 	gulp.watch('js/app/*.js', {cwd: source}, ['js', browserSync.reload]);
 	gulp.watch('js/app/**/*.js', {cwd: source}, ['js', browserSync.reload]);
 	gulp.watch('js/inc/*.js', {cwd: source}, ['js', browserSync.reload]);

@@ -7,7 +7,7 @@
   ],
   "dependencies": {
     "bourbon": "~4.2.6",
-    "neat": "~1.7.2",
-    "bitters": "~1.1.0"
+    "neat": "~1.7.3",
+    "bitters": "~1.2.0"
   }
 }
